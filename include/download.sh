@@ -19,14 +19,6 @@ download_clang_host_linux_x86() {
 	fi
 }
 
-download_gcc_aarch64() {
-	download_and_handle_tarball \
-		"prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-${gcc_aarch64_version}" \
-		"aarch64-linux-android-${gcc_aarch64_version}.tar.gz" \
-		"https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-${gcc_aarch64_version}/archive/refs/heads/${gcc_aarch64_branch}.tar.gz" \
-		"android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-${gcc_aarch64_version}-${gcc_aarch64_branch}"
-}
-
 download_gcc_arm() {
 	download_and_handle_tarball \
 		"prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-${gcc_arm_version}" \
@@ -70,7 +62,6 @@ download_sources() {
 
     [ "${download_clang}" = "true" ] && download_clang
     [ "${download_clang_host_linux_x86}" = "true" ] && download_clang_host_linux_x86
-	[ "${download_gcc_aarch64}" = "true" ] && download_gcc_aarch64
 	[ "${download_gcc_arm}" = "true" ] && download_gcc_arm
 	[ "${download_tools_lineage}" = "true" ] && download_tools_lineage
 	[ "${download_build_tools}" = "true" ] && download_build_tools
