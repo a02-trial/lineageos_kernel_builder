@@ -20,6 +20,4 @@ jobs:
 
     - name: Start Building Kernel
       run: |
-        export KBUILD_BUILD_USER="${{ github.actor }}"
-        export KBUILD_BUILD_HOST="${{ github.event.inputs.DEVICE_NAME }}"
-        ./build
+      ./build_all_configs.sh
