@@ -20,4 +20,4 @@ jobs:
 
     - name: Start Building Kernel
       run: |
-      ./build_all_configs.sh
+        ./build_all_configs.sh
