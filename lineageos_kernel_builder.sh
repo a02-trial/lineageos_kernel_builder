@@ -117,8 +117,6 @@ make_defconfig() {
         O="${kernel_build_out_prefix}" \
         ARCH="${device_arch}" \
         CROSS_COMPILE="${kernel_cross_compile}" \
-        CROSS_COMPILE_ARM32="${kernel_cross_compile_arm32}" \
-        CROSS_COMPILE_COMPAT="${kernel_cross_compile_compat}" \
         CLANG_TRIPLE="${kernel_clang_triple}" \
         CC="${kernel_cc}" \
         "${device_defconfig}"
@@ -136,8 +134,6 @@ make_menuconfig() {
         O="${kernel_build_out_prefix}" \
         ARCH="${device_arch}" \
         CROSS_COMPILE="${kernel_cross_compile}" \
-        CROSS_COMPILE_ARM32="${kernel_cross_compile_arm32}" \
-        CROSS_COMPILE_COMPAT="${kernel_cross_compile_compat}" \
         CLANG_TRIPLE="${kernel_clang_triple}" \
         CC="${kernel_cc}" \
         menuconfig
@@ -155,8 +151,6 @@ make_kernel() {
         O="${kernel_build_out_prefix}" \
         ARCH="${device_arch}" \
         CROSS_COMPILE="${kernel_cross_compile}" \
-        CROSS_COMPILE_ARM32="${kernel_cross_compile_arm32}" \
-        CROSS_COMPILE_COMPAT="${kernel_cross_compile_compat}" \
         CLANG_TRIPLE="${kernel_clang_triple}" \
         CC="${kernel_cc}"
     popd
