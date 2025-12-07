@@ -10,7 +10,7 @@ export gcc_arm_version="4.9"
 export gcc_arm_branch="lineage-19.1"
 
 ### We need these to build the Kernel ###
-export download_clang="true"
+export download_clang="false"
 export download_clang_host_linux_x86="true"
 export download_gcc_arm="true"
 export download_tools_lineage="true"
@@ -19,14 +19,14 @@ export download_misc="false"
 export download_kernel_build_tools="true"
 
 ### Configuration options ###
-export integrate_kernelsu="true"
-export enable_anykernel3_zip="true" # Create a AnyKernel3 zip containing the built Kernel
-export is_linux_4_9="true" # Linux 4.9 ONLY!!! Patch security/selinux/hooks.c so that KernelSU modules work
-export backport_path_umount="true" # backport path_umount from Linux 5.9 to fs/namespace.c
+export integrate_kernelsu="false"
+export enable_anykernel3_zip="false" # Create a AnyKernel3 zip containing the built Kernel
+export is_linux_4_9="false" # Linux 4.9 ONLY!!! Patch security/selinux/hooks.c so that KernelSU modules work
+export backport_path_umount="false" # backport path_umount from Linux 5.9 to fs/namespace.c
 
 ### Kernel configuration ###
-export kernel_dir="BR_kernel_a02"
-export kernel_branch="kernelku"
+export kernel_dir="https://github.com/rdbckp/kernel_a02"
+export kernel_branch="kernel"
 export device_codename="a02"
 export device_arch="arm"
 export device_defconfig="a02_defconfig"
